@@ -1,0 +1,148 @@
+/* Importação de fontes */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@500&display=swap');
+
+/* Estilo base do corpo */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to right, #fde4e6, #efe4f9); /* rosé + lilás */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Cabeçalhos */
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    color: #5c3d99; /* tom lilás escuro para destaque */
+}
+
+/* Container central */
+body > h1, body > h2, form, table {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* Formulário */
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-left: 8px solid #f8d7da; /* destaque rosé na lateral */
+}
+
+/* Campos de entrada */
+form input[type="text"],
+form input[type="number"],
+form button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+form input[readonly] {
+    background-color: #f0f0f0;
+    color: #777;
+    cursor: not-allowed;
+}
+
+/* Botão principal */
+form button {
+    background-color: #d4edda; /* verde claro */
+    color: #2e5d34;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background-color: #bce0c8;
+}
+
+/* Tabela de Fornecedores */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Cabeçalho da tabela */
+table th {
+    background-color: #fff3cd; /* amarelo pastel */
+    color: #665c00;
+    font-weight: bold;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+/* Células da tabela */
+table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Linha ao passar o mouse */
+table tr:hover {
+    background-color: #fef6e5;
+}
+
+/* Links de ação (Editar/Excluir) */
+table a {
+    color: #370a49; /* lilás vibrante */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+table a:hover {
+    color: #6b2d8d;
+}
+
+/* Mensagem de ausência de dados */
+p {
+    text-align: center;
+    font-style: italic;
+    color: #999;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    form input, form button {
+        font-size: 16px;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    table tr {
+        margin-bottom: 15px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+    table td {
+        padding: 8px;
+        border: none;
+        border-bottom: 1px solid #eee;
+    }
+
+    table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+        color: #555;
+    }
+}
